@@ -58,5 +58,4 @@ tandis que le categorie doivent unique
 | Clé primaire | **En gras** | table(**id_table**, nom) |
 
 ### Modifier 
-- ajout id_lsEmploye dans LIGNE_COMMANDE
-- ajout id_tables dans COMMANDE
+- ajout id_lsEmploye et id_tables dans COMMANDE

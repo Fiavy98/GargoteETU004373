@@ -10,12 +10,15 @@ CREATE TABLE list_employe(
 );
 
 CREATE TABLE tables(
-    id__table SERIAL PRIMARY KEY,
+    id_table SERIAL PRIMARY KEY,
     nom VARCHAR(20)
 );
 
-ALTER TABLE ligne_commande ADD COLUMN id_list_employe INTEGER REFERENCES list_employe(id_list_employe);
--- ALTER TABLE ligne_commande ALTER COLUMN id_list_employe SET NOT NULL;
+ALTER TABLE commande ADD COLUMN id_tables INTEGER REFERENCES tables(id_table);
+ALTER TABLE commande ADD COLUMN id_list_employe INTEGER REFERENCES list_employe(id_list_employe);
+
+-- ALTER TABLE nom_table
+-- RENAME COLUMN ancien_nom TO nouveau_nom;
 
 INSERT INTO type_employe(libelle) VALUES
 ('serveurs'),
@@ -36,14 +39,15 @@ INSERT INTO tables(nom) VALUES
 ('table 8');
 
 
-INSERT INTO commande (date_commande, id_client) VALUES
-('2026-10-10', 1), -- 7
-('2026-10-11', 2); -- 8
+INSERT INTO commande (date_commande, id_client,id_table,id_list_employe) VALUES
+('2026-10-10', 1,1,1), -- 7
+('2026-10-11', 2,2,2); -- 8
+UPDATE commande SET id_list_employe=1 WHERE id_commande=7;
+UPDATE commande SET id_list_employe=2 WHERE id_commande=8;
 
-
-INSERT INTO ligne_commande (id_commande, id_plat, quantite,id_list_employe) VALUES
-(7, 1, 2,1),
-(7, 3, 1,1),
-(7, 7, 2,1),
-(8, 2, 1,2),
-(8, 5, 2,2);
+INSERT INTO ligne_commande (id_commande, id_plat, quantite) VALUES
+(7, 1, 2),
+(7, 3, 1),
+(7, 7, 2),
+(8, 2, 1),
+(8, 5, 2);

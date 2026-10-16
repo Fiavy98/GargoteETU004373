@@ -29,4 +29,11 @@ FROM commande c
 LEFT JOIN client cli ON c.id_client=cli.id_client
 GROUP BY cli.nom;
 
--- Etape 5 : nombre de commande et chiffre d'afaire par serveur
+-- Etape 5 : nombre de commande et chiffre d'affaire par serveur
+
+SELECT emp.nom,count (*) AS nbCommande, SUM(quantite * p.prix) AS CA
+FROM commande  c
+JOIN list_employe emp ON c.id_list_employe = emp.id_list_employe
+JOIN ligne_commande lcmd ON c.id_commande = lcmd.id_commande
+JOIN plat p ON lcmd.id_plat=p.id_plat 
+GROUP BY emp.id_list_employe,c.id_commande;
