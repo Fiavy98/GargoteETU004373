@@ -26,3 +26,14 @@
 car un categorie peuvent s'associer au plusieur plat 
 - il est difficile de jouer avec  les caractere (VARCHAR), example un ereur de saisie 
 tandis que le categorie doivent unique
+
+---
+
+# Etape 3 :
+### Ajouter :
+| Élément | Notation | Exemple |
+|---|---|---|
+| Clé primaire composée tous les attributs | **En gras** | LIGNE_COMMANDE(**id_commande**,**id_plat**,
+quantite) |
+|---|---|---|
+|Attribut facultatif (NULL autorisé)  | suivi de ? |COMMANDE(id_commande, date_commande, #id_client?)|
