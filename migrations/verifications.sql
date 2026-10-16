@@ -22,3 +22,9 @@ FROM commande c
 JOIN ligne_commande lc ON c.id_commande = lc.id_commande
 JOIN plat p ON lc.id_plat = p.id_plat
 GROUP BY c.id_commande;
+
+-- Etape 4 : liste des cmd  avec le nom client , client de passag si il n'y en a pas
+SELECT COALESCE(cli.nom,'clientDePassage') AS client 
+FROM commande c
+LEFT JOIN client cli ON c.id_client=cli.id_client
+GROUP BY cli.nom;

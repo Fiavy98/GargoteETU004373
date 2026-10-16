@@ -41,3 +41,6 @@ tandis que le categorie doivent unique
 - on place le quantite dans la table LIGNE_COMMANDE
 
 ---
+
+# Etape 4
+- on a deja cree le client au etape 4 
