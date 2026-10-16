@@ -33,7 +33,9 @@ tandis que le categorie doivent unique
 ### Ajouter :
 | Élément | Notation | Exemple |
 |---|---|---|
-| Clé primaire composée tous les attributs | **En gras** | LIGNE_COMMANDE(**id_commande**,**id_plat**,
+| Clé primaire composée tous les attributs | **En gras** | LIGNE_COMMANDE(**id_ligne_commande**,**id_commande**,**id_plat**,
 quantite) |
 |---|---|---|
 |Attribut facultatif (NULL autorisé)  | suivi de ? |COMMANDE(id_commande, date_commande, #id_client?)|
+|---|---|---|
+| Clé primaire | **En gras** | client(**id_client**, nom) |

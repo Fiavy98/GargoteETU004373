@@ -11,7 +11,14 @@ FROM PLAT
 ORDER BY prix ASC
 LIMIT 1;
 
--- Etape 2 
+-- Etape 2 : nombre de plats par categorie
 SELECT categorie.nom as categorie ,count (*) as nbPlat FROM plat 
 JOIN categorie ON plat.id_categorie=categorie.id_categorie 
 GROUP BY categorie.id_categorie; 
+
+-- Etape 3 : Montant total de chaque commande 
+SELECT c.id_commande, SUM(lc.quantite * p.prix) AS montant
+FROM commande c
+JOIN ligne_commande lc ON c.id_commande = lc.id_commande
+JOIN plat p ON lc.id_plat = p.id_plat
+GROUP BY c.id_commande;
