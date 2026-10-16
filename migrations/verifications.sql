@@ -28,3 +28,5 @@ SELECT COALESCE(cli.nom,'clientDePassage') AS client
 FROM commande c
 LEFT JOIN client cli ON c.id_client=cli.id_client
 GROUP BY cli.nom;
+
+-- Etape 5 : nombre de commande et chiffre d'afaire par serveur

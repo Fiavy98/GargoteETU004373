@@ -50,8 +50,13 @@ tandis que le categorie doivent unique
 - on utilise LEFT JOIN 
 
 # Etape 5  :
+### Ajouter 
 | Élément | Notation | Exemple |
 |---|---|---|
-| Clé primaire | **En gras** | typeEmploye(**id_typeEmployer**, libelle) |
-| Clé étrangère |précédée de # | listEmploye(**id_lsEmploye**, #id_typeEmploye,nom) |
+| Clé primaire | **En gras** | type_employe(**id_typeEmployer**, libelle) |
+| Clé étrangère |précédée de # | list_Employe(**id_lsEmploye**, #id_typeEmploye,nom) |
 | Clé primaire | **En gras** | table(**id_table**, nom) |
+
+### Modifier 
+- ajout id_lsEmploye dans LIGNE_COMMANDE
+- ajout id_tables dans COMMANDE
