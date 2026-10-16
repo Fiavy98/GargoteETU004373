@@ -59,3 +59,6 @@ tandis que le categorie doivent unique
 
 ### Modifier 
 - ajout id_lsEmploye et id_tables dans COMMANDE
+
+### PIEGE 
+- le nom table pose un probleme sql car le table est un mot cle sql
