@@ -44,3 +44,7 @@ tandis que le categorie doivent unique
 
 # Etape 4
 - on a deja cree le client au etape 4 
+
+### Piege :
+- le cle etrangere pour le id_client n'est pas NOT NULL
+- on utilise LEFT JOIN 
