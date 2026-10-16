@@ -48,3 +48,10 @@ tandis que le categorie doivent unique
 ### Piege :
 - le cle etrangere pour le id_client n'est pas NOT NULL
 - on utilise LEFT JOIN 
+
+# Etape 5  :
+| Élément | Notation | Exemple |
+|---|---|---|
+| Clé primaire | **En gras** | typeEmploye(**id_typeEmployer**, libelle) |
+| Clé étrangère |précédée de # | listEmploye(**id_lsEmploye**, #id_typeEmploye,nom) |
+| Clé primaire | **En gras** | table(**id_table**, nom) |
